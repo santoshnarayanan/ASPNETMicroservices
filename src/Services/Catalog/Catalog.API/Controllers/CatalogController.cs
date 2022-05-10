@@ -13,6 +13,7 @@ namespace Catalog.API.Controllers
         private readonly IProductRepository _repository;
         private readonly ILogger<CatalogController> _logger;
 
+        //Dependency injection - register typesIProductRepository
         public CatalogController(IProductRepository repository, ILogger<CatalogController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));

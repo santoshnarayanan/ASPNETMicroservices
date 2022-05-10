@@ -8,6 +8,7 @@ namespace Catalog.API.Repositories
     {
         private readonly ICatalogContext _context;
         
+        //Dependency injection - register types
         public ProductRepository(ICatalogContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
