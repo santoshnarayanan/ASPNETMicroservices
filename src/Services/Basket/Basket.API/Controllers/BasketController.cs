@@ -14,7 +14,7 @@ namespace Basket.API.Controllers
 
         public BasketController(IBasketRepository repository)
         {
-            _repository = repository;
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         [HttpGet("{userName}", Name = "GetBasket")]
