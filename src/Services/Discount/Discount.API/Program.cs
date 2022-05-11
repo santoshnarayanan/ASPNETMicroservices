@@ -1,4 +1,9 @@
+using Discount.API.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Register Service
+builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
 // Add services to the container.
 
