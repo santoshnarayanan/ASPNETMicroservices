@@ -4,7 +4,7 @@ services:
   catalogdb:
     image: mongo
   basketdb:
-    image: redis:alphine  # takes less space of resis-alphine  
+    image: redis:alpine  # takes less space of resis-alphine  
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
