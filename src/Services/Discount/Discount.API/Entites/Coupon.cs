@@ -6,8 +6,8 @@
 
         public string ProductName { get; set; }
 
-        public decimal Description { get; set; }
+        public string Description { get; set; }
 
-        public string Amount { get; set; }
+        public int Amount { get; set; }
     }
 }
