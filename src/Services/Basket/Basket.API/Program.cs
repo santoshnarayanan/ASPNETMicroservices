@@ -1,7 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
 
+//Add Redis service
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    //options.Configuration = "localhost:6379";
+    options.Configuration = builder.Configuration.GetValue<string>("CacheSettings:ConnectionString");
+});
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
