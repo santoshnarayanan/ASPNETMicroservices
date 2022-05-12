@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Register Service
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
-
+builder.Services.AddAutoMapper(typeof(Program));
 // Add services to the container.
 builder.Services.AddGrpc();
 
