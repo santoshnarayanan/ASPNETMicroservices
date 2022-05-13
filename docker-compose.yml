@@ -34,6 +34,12 @@ services:
       context: .
       dockerfile: src/Services/Discount/Discount.API/Dockerfile
 
+  discount.grpc:
+    image: ${DOCKER_REGISTRY-}discountgrpc
+    build:
+      context: .
+      dockerfile: src/Services/Discount/Discount.Grpc/Dockerfile
+
 volumes: #save data
   mongo_data:
   portainer_data:  # userinfo
