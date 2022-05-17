@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Ordering.Application.Features.Orders.Queries.GetOrdersList
 {
-    //CQRS - Query
+    //MediaR - Query
     public class GetOrdersListQuery : IRequest<List<OrdersVm>>
     {
         public string UserName { get; set; }

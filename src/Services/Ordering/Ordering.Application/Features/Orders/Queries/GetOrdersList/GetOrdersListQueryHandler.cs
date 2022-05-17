@@ -9,7 +9,7 @@ using Ordering.Application.Contracts.Persistence;
 
 namespace Ordering.Application.Features.Orders.Queries.GetOrdersList
 {
-    //CQRS   - QueryHandler
+    //MediaR   - QueryHandler
     public class GetOrdersListQueryHandler : IRequestHandler<GetOrdersListQuery, List<OrdersVm>>
     {
         private readonly IOrderRepository _orderRepository;
