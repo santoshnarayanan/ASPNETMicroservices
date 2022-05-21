@@ -43,9 +43,16 @@ services:
       context: .
       dockerfile: src/Services/Discount/Discount.Grpc/Dockerfile
 
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: src/Services/Ordering/Ordering.API/Dockerfile
+
 volumes: #save data
   mongo_data:
   portainer_data:  # userinfo
   postgres_data:
   pgadmin_data:
+
 
