@@ -30,7 +30,15 @@ builder.Services.AddMassTransit(config =>
         cfg.Host(builder.Configuration["EventBusSettings:HostAddress"]);
     });
 });
-builder.Services.AddMassTransitHostedService();
+
+#region Important Info
+//builder.Services.AddMassTransitHostedService(); ---  This is outdated and only below packages should be used with specific version
+
+//< PackageReference Include = "MassTransit" Version = "8.0.2" />
+//< PackageReference Include = "MassTransit.RabbitMQ" Version = "8.0.2" />
+ // link - https://stackoverflow.com/questions/70187422/addmasstransithostedservice-cannot-be-found
+#endregion
+
 
 // Add services to the container.
 builder.Services.AddControllers();
