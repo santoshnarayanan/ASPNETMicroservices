@@ -13,6 +13,8 @@ builder.Services.AddStackExchangeRedisCache(options =>
 
 //Register Dependency injected classes
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+//Activate AutoMapper in the startup (i.e. Program )
+builder.Services.AddAutoMapper(typeof(Program));
 
 //Register DiscountGrpcService and Client
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
